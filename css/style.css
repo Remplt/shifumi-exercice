@@ -53,14 +53,6 @@ main p{
     width: 100%;
 }
 
-svg.svg-inline--fa.fa-hand-rock.fa-w-16,
-svg.svg-inline--fa.fa-hand-paper.fa-w-14,
-svg.svg-inline--fa.fa-hand-scissors.fa-w-16{
-    width: 150px;
-    height: 150px;
-    
-}
-
 #pierre,
 #feuille,
 #ciseau{
