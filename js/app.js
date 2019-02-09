@@ -2,23 +2,25 @@
 var buttonPierre = document.getElementById('pierre');
 var buttonFeuille = document.getElementById('feuille');
 var buttonCiseau = document.getElementById('ciseau');
+// On initialise les variables qui nous seront utiles pour le score
 var score = 0;
 var scoreComputer = 0;
 
-//console.log(buttonPierre);
-
+// Fonction qui permet d'augmenter le score du joueur et de l'afficher
 var scoreUp = function (){
     var addScore = document.getElementById('score');
     score++;
     addScore.textContent = score;
 };
 
+// Fonction qui permet d'augmenter le score de l'ordinateur et de l'afficher
 var scoreUpComputer = function(){
     var addScoreComputer = document.getElementById('scoreOrdi');
     scoreComputer++;
     addScoreComputer.textContent = scoreComputer;
 }
 
+// Fonction qui permet de choisir un nombre au hasard entre 1 et 3 et de l'affecter
 var botChoice = function(){
     // On laisse l'ordinateur choisir
     // On prend un nombre random entre 1 et 3 compris qui correspondent aux elements du jeu
@@ -30,6 +32,7 @@ var botChoice = function(){
     return choixOrdi;
 }
 
+// Fonction qui permet de tirer un nombre au hasard
 var getRandom = function(min, max) {
     // Math.random retourne un nombre compris entre 0 et 1
     var zeroAndOne = Math.random(); // 0.99
@@ -39,11 +42,7 @@ var getRandom = function(min, max) {
     return Math.floor(minAndMax);
 };
 
-// //On récupere la valeur de l'ordinateur
-// var choixOrdi = botChoice();
-// console.log('Choix de l\'ordi : ', choixOrdi);
-
-// On veut maintenant tester si le joueur gagne ou non
+// On veut maintenant tester si le joueur gagne ou non et augmenter son score ou celui de l'ordi en fonction du résultat
 var whoWin = function(event, choixOrdi){
     // Choix de l'user = Pierre
     if (event.target.id == 'pierre') {
@@ -72,12 +71,13 @@ var whoWin = function(event, choixOrdi){
     }
 }
 
+// Fonction qui lance le jeu
 var play = function(event){
     var choixOrdi = botChoice();
-    // console.log('Choix de l\'ordi dans la fonction : ', choixOrdi);    
     whoWin(event, choixOrdi);
 }
 
+// Permet de lancer le jeu au clic sur les différents boutons possibles
 buttonPierre.addEventListener('click', play);
 buttonFeuille.addEventListener('click', play);
 buttonCiseau.addEventListener('click', play);
