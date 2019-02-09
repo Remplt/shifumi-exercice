@@ -1,0 +1,71 @@
+body,
+html{
+    display : flex;
+    justify-content: center;
+    flex: 1;
+    height: 100vh;
+    background-color: #778899;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
+}
+
+main{
+}
+
+h1{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+main p{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#listeDesScores{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+#monScore,
+#sonScore{
+    display: inline-block;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    /* width: 40%; */
+    padding: 10px;
+}
+
+#choix{
+    text-align: center;
+    width: 100%;
+}
+
+svg.svg-inline--fa.fa-hand-rock.fa-w-16,
+svg.svg-inline--fa.fa-hand-paper.fa-w-14,
+svg.svg-inline--fa.fa-hand-scissors.fa-w-16{
+    width: 150px;
+    height: 150px;
+    
+}
+
+#pierre,
+#feuille,
+#ciseau{
+    padding: 30px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
