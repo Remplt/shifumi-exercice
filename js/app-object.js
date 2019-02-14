@@ -49,10 +49,22 @@ var app = {
     },
     // On veut maintenant tester si le joueur gagne ou non et augmenter son score ou celui de l'ordi en fonction du résultat
     whoWin: function(event, choixOrdi){
+        var affichageGagnant = document.getElementById('gagnant');
+        affichageGagnant.innerHTML = "";
+        if(choixOrdi == 1){
+            choixOrdi = "pierre";
+        } else if(choixOrdi == 2){
+            choixOrdi = "feuille";
+        } else {
+            choixOrdi = "ciseau";
+        }
+
+        if (event.target.id == choixOrdi){
+            affichageGagnant.innerHTML = "<p id='egalite'> Egalité </p>"; 
         // Choix de l'user = Pierre
-        if (event.target.id == 'pierre') {
+        } else if (event.target.id == 'pierre') {
             // Gagne sur les ciseaux
-            if (choixOrdi == '3'){
+            if (choixOrdi == 'ciseau'){
                 app.scoreUp();
             } else {
                 app.scoreUpComputer();
@@ -60,7 +72,7 @@ var app = {
         // Choix de l'user = feuille
         } else if (event.target.id == 'feuille'){
             // Gagne sur la pierre
-            if( choixOrdi == '1'){
+            if( choixOrdi == 'pierre'){
                 app.scoreUp();
             } else {
                 app.scoreUpComputer();
@@ -68,16 +80,29 @@ var app = {
         // Choix de l'user = ciseau
         } else if (event.target.id == 'ciseau'){
             // Gagne sur la feuille
-            if (choixOrdi == '2') {
+            if (choixOrdi == 'feuille') {
                 app.scoreUp();        
             } else {
                 app.scoreUpComputer();
             }
         }
     },
+    phraseChoice: function(choixJoueur, choixOrdi){
+        console.log('lordi a choisi', choixOrdi, 'et le joueur', choixJoueur.target.id)
+        if(choixOrdi == 1){
+            choixOrdi = "pierre";
+        } else if(choixOrdi == 2){
+            choixOrdi = "feuille";
+        } else {
+            choixOrdi = "ciseau";
+        }
+        phraseChoix = document.getElementById('affichageChoix');
+        phraseChoix.innerHTML = "<p>L'ordinateur a choisi <strong>" + choixOrdi + "</strong> et vous avez choisi <strong>" + choixJoueur.target.id +".</strong></p>";
+    },
     // Fonction qui lance le jeu
     play: function(event){
     var choixOrdi = app.botChoice();
+    app.phraseChoice(event, choixOrdi);
     app.whoWin(event, choixOrdi);
     },
 };
