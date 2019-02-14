@@ -2,20 +2,30 @@ var app = {
     init: function(event){
         console.log('app : init');
 
-        // On lance le jeu
-        app.play(event);
+        // Récuperer le clic de l'utilisateur
+        var buttonPierre = document.getElementById('pierre');
+        var buttonFeuille = document.getElementById('feuille');
+        var buttonCiseau = document.getElementById('ciseau');
+
+        // Permet de lancer le jeu au clic sur les différents boutons possibles
+        buttonPierre.addEventListener('click', app.play);
+        buttonFeuille.addEventListener('click', app.play);
+        buttonCiseau.addEventListener('click', app.play);
+        console.log(event);
     },
+    score: 0,
+    scoreComputer: 0,
     // Fonction qui permet d'augmenter le score du joueur et de l'afficher
     scoreUp: function (){
         var addScore = document.getElementById('score');
-        score++;
-        addScore.textContent = score;
+        app.score++;
+        addScore.textContent = app.score;
     },
     // Fonction qui permet d'augmenter le score de l'ordinateur et de l'afficher
     scoreUpComputer: function(){
         var addScoreComputer = document.getElementById('scoreOrdi');
-        scoreComputer++;
-        addScoreComputer.textContent = scoreComputer;
+        app.scoreComputer++;
+        addScoreComputer.textContent = app.scoreComputer;
     },
     // Fonction qui permet de choisir un nombre au hasard entre 1 et 3 et de l'affecter
     botChoice: function(){
@@ -72,17 +82,8 @@ var app = {
     },
 };
 
-
-// Récuperer le clic de l'utilisateur
-var buttonPierre = document.getElementById('pierre');
-var buttonFeuille = document.getElementById('feuille');
-var buttonCiseau = document.getElementById('ciseau');
-// On initialise les variables qui nous seront utiles pour le score
-var score = 0;
-var scoreComputer = 0;
+window.addEventListener('DOMContentLoaded', app.init);
 
 
-// Permet de lancer le jeu au clic sur les différents boutons possibles
-buttonPierre.addEventListener('click', app.init);
-buttonFeuille.addEventListener('click', app.init);
-buttonCiseau.addEventListener('click', app.init);
+
+
