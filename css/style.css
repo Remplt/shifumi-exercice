@@ -5,6 +5,7 @@ html{
     flex: 1;
     height: 100vh;
     background-color: #778899;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 img{
@@ -66,4 +67,16 @@ main p{
     font-size: 1.1em;
     font-weight: bold;
     color: #ccc;
+}
+
+#divButton{
+    text-align: center;
+}
+#reset{
+    background-color: #ccc;
+    border: none;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
 }

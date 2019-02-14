@@ -11,7 +11,10 @@ var app = {
         buttonPierre.addEventListener('click', app.play);
         buttonFeuille.addEventListener('click', app.play);
         buttonCiseau.addEventListener('click', app.play);
-        console.log(event);
+
+        // Ajout du reset
+        var button = document.getElementById('reset');
+        button.addEventListener('click', app.reset);
     },
     score: 0,
     scoreComputer: 0,
@@ -85,7 +88,7 @@ var app = {
     phraseChoice: function(choixJoueur, choixOrdi){
         console.log('lordi a choisi', choixOrdi, 'et le joueur', choixJoueur.target.id)
         var choixOrdi = app.conversionChoixOrdi(choixOrdi);
-        phraseChoix = document.getElementById('affichageChoix');
+        var phraseChoix = document.getElementById('affichageChoix');
         phraseChoix.innerHTML = "<p>L'ordinateur a choisi <strong>" + choixOrdi + "</strong> et vous avez choisi <strong>" + choixJoueur.target.id +".</strong></p>";
     },
     // Converti le choix de l'ordi (int) en string
@@ -98,6 +101,22 @@ var app = {
             choixOrdi = "ciseau";
         }
         return choixOrdi;
+    },
+    // Reset tous les parametres de jeu
+    reset: function(event){
+        event.preventDefault();
+        // Remet les scores a 0
+            // Score de l'ordi a zero
+        document.getElementById('scoreOrdi').innerHTML = "0";
+        app.scoreComputer = 0;
+            // Score du joueur a zero
+        document.getElementById('score').innerHTML = "0";
+        app.score = 0;
+        // Comparaison des choix des joueurs effacés
+        var phraseChoix = document.getElementById('affichageChoix');
+        phraseChoix.innerHTML = " ";
+        // Si egalité au moment du reset, effacé aussi
+        document.getElementById('gagnant').innerHTML = "";
     },
     // Fonction qui lance le jeu
     play: function(event){
