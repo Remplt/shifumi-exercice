@@ -51,13 +51,7 @@ var app = {
     whoWin: function(event, choixOrdi){
         var affichageGagnant = document.getElementById('gagnant');
         affichageGagnant.innerHTML = "";
-        if(choixOrdi == 1){
-            choixOrdi = "pierre";
-        } else if(choixOrdi == 2){
-            choixOrdi = "feuille";
-        } else {
-            choixOrdi = "ciseau";
-        }
+        var choixOrdi = app.conversionChoixOrdi(choixOrdi);
 
         if (event.target.id == choixOrdi){
             affichageGagnant.innerHTML = "<p id='egalite'> Egalité </p>"; 
@@ -87,8 +81,15 @@ var app = {
             }
         }
     },
+    // Affiche les choix des joueurs
     phraseChoice: function(choixJoueur, choixOrdi){
         console.log('lordi a choisi', choixOrdi, 'et le joueur', choixJoueur.target.id)
+        var choixOrdi = app.conversionChoixOrdi(choixOrdi);
+        phraseChoix = document.getElementById('affichageChoix');
+        phraseChoix.innerHTML = "<p>L'ordinateur a choisi <strong>" + choixOrdi + "</strong> et vous avez choisi <strong>" + choixJoueur.target.id +".</strong></p>";
+    },
+    // Converti le choix de l'ordi (int) en string
+    conversionChoixOrdi: function(choixOrdi){
         if(choixOrdi == 1){
             choixOrdi = "pierre";
         } else if(choixOrdi == 2){
@@ -96,8 +97,7 @@ var app = {
         } else {
             choixOrdi = "ciseau";
         }
-        phraseChoix = document.getElementById('affichageChoix');
-        phraseChoix.innerHTML = "<p>L'ordinateur a choisi <strong>" + choixOrdi + "</strong> et vous avez choisi <strong>" + choixJoueur.target.id +".</strong></p>";
+        return choixOrdi;
     },
     // Fonction qui lance le jeu
     play: function(event){
