@@ -2,6 +2,8 @@
 
 On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 
+<img style="width: 50%; margin: auto;" src ="img/shifumi.gif">
+
 ## Code fourni
 - `index.html` le fichier HTML contenant le jeu qui inclut : 
   - `css/style.css` le fichier des styles que vous pouvez changer si vous le souhaitez
