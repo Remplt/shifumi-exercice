@@ -8,19 +8,19 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
   - `js/app.js` le fichier qui devra contenir le code javascript
 
 ## Challenge
-### Etape 1 - Le choix de l'utilisateur
-- On veut savoir ou l'utilisateur a cliqué. 
+### Etape 1 : Le choix de l'utilisateur
+- On veut connaitre le bouton sur lequel l'utilisateur a cliqué. 
   - Récupérer le clic de l'utilisateur 
-  - Puis il faudra l'afficher dans la console
+  - Puis l'afficher dans la console
 
 <details><summary>Spoiler</summary>
-1. Il faudra utiliser un ecouteur d'événements<br>
-2. Ainsi qu'un console.log pour l'affichage dans la console
+1. Il faudra utiliser un écouteur d'événements<br>
+2. Il faudra utiliser un console.log pour l'affichage dans la console
 </details>
 
-### Etape 2 - Le choix de l'ordinateur
-- On veut que l'ordinateur fasse un choix parmi les trois propositions : pierre, feuille, ciseau.
-  - Créer une fonction pour gérer ce choix
+### Etape 2 : Le choix de l'ordinateur
+- On veut que l'ordinateur fasse un choix parmi les trois propositions : pierre, feuille ou ciseau.
+  - Créer une fonction qui permet de faire ce choix
   - Il faut que ce choix soit aléatoire
   - On veut afficher ce choix dans la console
   - On veut retourner ce choix pour l'utiliser plus tard
@@ -33,28 +33,28 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 ### Etape 3 : Le traitement du choix de l'ordinateur
 - On souhaite pouvoir directement comprendre (en tant qu'humain) ce qu'a choisi l'ordinateur.
   - Créer une fonction qui permet de convertir le choix de l'ordinateur.
-  - Si 1 => pierre
-  - Si 2 => feuille
-  - Si 3 => ciseau
+    - Si 1 => pierre
+    - Si 2 => feuille
+    - Si 3 => ciseau
   - On souhaite retourner cette valeur
 
 <details><summary>Spoiler</summary>
-1. Pour la conversion, vous pouvez poser une condition pour être dans le bon choix.<br>
+1. Pour la conversion, vous pouvez poser une condition pour être dans le bon choix et ainsi affecter la bonne string au choix de l'ordinateur.<br>
 </details>
 
 ### Etape 4 : Qui a gagné ?
 - On souhaite savoir qui a gagné
   - Créer une fonction qui permet de comparer le choix de l'utilisateur avec celui de l'ordinateur
   - On voudra pour le moment afficher le gagnant du duel dans la console
-  - Bonus : Si il y a égalité, on voudra afficher "Egalité" dynamiquement dans le HTML dans la `div #gagnant`. Ce message devra s'effacer au prochain clic si il n'y a pas d'égalité.
+  - Bonus : S'il y a égalité, on voudra afficher "Egalité" dynamiquement dans le HTML dans la `div #gagnant`. Ce message devra s'effacer au prochain clic s'il n'y a pas de nouvelle égalité.
 
 <details><summary>Spoiler</summary>
 1. Pour la comparaison, vous pouvez poser une condition pour être dans le bon choix.<br>
 2. La fonction prendra deux paramètres<br>
-3. Le clic de l'utilisateur a été appelé grâce à un ecouteur d'évenements
+3. Le clic de l'utilisateur a été appelé grâce à un ecouteur d'évenements<br>
 
   <details><summary>Second Spoiler</summary>
-  1. Il faudra appeler cette fonction lors du clic sur un des choix.<br>
+  1. Il faudra appeler cette fonction lors du clic de l'utilisateur sur un des choix.<br>
   2. Le paramètre "event" sera alors donné à cette fonction<br>
   3. On pourra donc comparer `event.target.id` et le choix de l'ordinateur
   </details>
@@ -71,8 +71,8 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 
 ### Etape 6 : Quels sont les scores ?
 - On souhaite connaitre les scores des deux joueurs directement sans avoir à regarder dans la console
-  - Afficher le score du joueur dans la span d'id 'score'
-  - Afficher le score de l'ordinateur dans la span d'id 'scoreOrdi'
+  - Afficher le score du joueur dans la span d'id __'score'__
+  - Afficher le score de l'ordinateur dans la span d'id __'scoreOrdi'__
 
 <details><summary>Spoiler</summary>
 1. Vous pouvez créer des fonctions (une pour le joueur et une pour l'ordi) qui incrémentent le score en fonction du resultat des choix<br>
@@ -82,7 +82,7 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 ### Etape 7 : Qui a choisi quoi ?
 - On souhaite maintenant savoir ce qu'a choisi le joueur et ce qu'a choisi l'ordinateur
   - créer une fonction qui permet d'afficher une phrase qui montre les choix des joueurs
-  - Il faudra afficher cette phrase dans la div d'id 'affichageChoix'
+  - Il faudra afficher cette phrase dans la div d'id __'affichageChoix'__
   - La phrase pourra ressembler à "L'ordinateur a choisi pierre et vous avez choisi feuille !"
 
 <details><summary>Spoiler</summary>
@@ -94,11 +94,11 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 ### Etape Bonus : Une nouvelle partie ?
 - On souhaite recommencer une nouvelle partie sans avoir à rafraichir la page
   - Créer une fonction qui permet de recommencer une nouvelle partie
-  - Elle devra lorsque l'on clique sur le bouton d'id 'reset' :
+  - Elle devra lorsque l'on clique sur le bouton d'id __'reset'__ :
     - Ne pas rafraichir la page
     - Remettre les scores à 0
     - Effacer la phrase qui montre les choix des joueurs
-    - Supprimer la phrase du bonus de l'étape 4.
+    - Effacer la phrase du bonus de l'étape 4.
 
 <details><summary>Spoiler</summary>
 1. Cette fonction devra être lancée que lors d'un évenement<br>
@@ -108,7 +108,7 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 
 
 ## Correction
-- Vous pourrez trouver ma correction ici : https://github.com/Remplt/shifumi
+- Vous pourrez trouver ma correction -> https://github.com/Remplt/shifumi dans le dossier js.
 - Dans le dossier js, vous trouverez un fichier app.js qui contient le code sous forme fonctionnelle et dans le fichier app-object.js, vous trouverez le code sous POO.
 
 ## Feedback
