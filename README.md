@@ -112,6 +112,7 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 ## Correction
 - Vous pourrez trouver ma correction -> https://github.com/Remplt/shifumi dans le dossier js.
 - Dans le dossier js, vous trouverez un fichier app.js qui contient le code sous forme fonctionnelle et dans le fichier app-object.js, vous trouverez le code sous POO.
+- Le fichier app.js ne contient ni la fonction de reset ni le bonus de l'étape 4 ni la fonction qui affiche les choix. Vous pourrez trouver ces fonctions dans le fichier app-object.js
 
 ## Feedback
 - Les retours sur les explications sont les bienvenus
