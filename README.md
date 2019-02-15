@@ -8,6 +8,7 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 - `index.html` le fichier HTML contenant le jeu qui inclut (pas besoin d'y toucher normalement) : 
   - `css/style.css` le fichier des styles que vous pouvez changer si vous le souhaitez (déjà lié)
   - `js/app.js` le fichier qui devra contenir le code javascript (déjà lié)
+- Un dossier img qui contient les images nécéssaires à l'affichage de la pierre, de la feuille et du ciseau.
 
 ## Challenge
 ### Etape 1 : Le choix de l'utilisateur
@@ -118,7 +119,6 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 - Les retours sur les explications sont les bienvenus
 - Les retours sur mon code sont les bienvenus
 - Les retours sur le design ne sont pas les bienvenus 😂
-
 
 ## Auteur(s)
 <ul>
