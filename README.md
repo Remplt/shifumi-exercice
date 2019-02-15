@@ -14,7 +14,9 @@ Pour le moment, le site reste très basique et utilise de la programmation fonct
 - Ajouter un tableau des scores des anciennes parties
 - Ajouter une limite de point a la partie
 - Améliorer le code
-- Rendre le code dans le style de la POO
+- ~~Rendre le code dans le style de la POO~~
+- ~~Ajouter phrase pour les choix du joueur et de l'ordinateur~~
+- ~~Ajouter une phrase qui signale l'égalité~~
 
 
 ## Prérequis
