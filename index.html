@@ -5,33 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-   <title>Pierre Feuille Ciseau</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Pierre Feuille Ciseau</title>
 </head>
 <body>
-    <main>
-        <h1>Jouons au "Pierre Feuille Ciseau"</h1>
-        <p>Veuillez cliquez sur un des choix ci-dessous pour jouer</p>
-        <div id="listeDesScores">
-            <div id="monScore"> Ton score : <span id="score">0</span></div>
-            <div id="sonScore">Score de l'ordi : <span id="scoreOrdi">0</span> </div>
+    <div class="container ">
+        <!-- Affichage de mon titre et sous-titre -->
+        <div class="row align-items-center">
+            <h1 class="col-12 mt-4 text-center mt-4">Jouons au "Pierre Feuille Ciseau"</h1>
+            <h3 class="col-12 text-center mt-4">Veuillez cliquez sur un des choix ci-dessous pour jouer</h3>
+       </div>
+
+       <!-- Affichage de mes scores -->
+       <div class="row mt-5 text-center align-items-center text-uppercase" id="listeDesScores" >
+            <h5 class="col-5" id="monScore"> Ton score : <span id="score">0</span></h5>
+            <div id="divButton" class="col-2 btn btn-info">
+                <div id="reset" value="Restart">Reset la partie</div>
+            </div>
+            <h5 id="sonScore" class="col-5">Score de l'ordi : <span id="scoreOrdi">0</span> </h5>
         </div>
-        <div id="gagnant"></div>
-        <div id="choix">
-            <a href="#" id="pierre">
-                <img src="img/Rock.jpg" alt="">
+
+        <!-- Ajout du choix -->
+        <div id="choix" class='row mt-5 text-center align-items-center'>
+            <a href="#" id="pierre" class='col-4'>
+                <i class="fas fa-hand-rock fa-9x not-active "></i>
             </a>
-            <a href="#" id="feuille">
-                <img src="img/paper.jpg" alt="">
+            <a href="#" id="feuille" class='col-4'>
+                <i class="fas fa-hand-paper fa-9x not-active "></i>
             </a>
-            <a href="#" id="ciseau">
-                <img src="img/ciseau.jpeg" alt="">
+            <a href="#" id="ciseau" class='col-4'>
+                <i class="fas fa-hand-scissors fa-9x not-active "></i>
             </a>
         </div>
-        <div id="affichageChoix"></div>
-        <div id="divButton">
-            <button id="reset" value="Restart">Reset la partie</button>
+
+        <!-- Affichage des messages personnalisés -->
+        <div class="row align-items-center">
+            <!-- Affiche le choix de l'ordinateur et celui de l'utilisateur -->
+            <div id="affichageChoix" class=""></div>
+            <!-- Affiche un message si il y a une égalité -->
+            <div id="gagnant"></div>
         </div>
-    </main>
-    <script src="js/app.js"></script>
+    </div>
+
+
+    <script src="js/app-object.js"></script>
 </body>
 </html>
