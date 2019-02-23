@@ -120,7 +120,6 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 ## Feedback
 - Les retours sur les explications sont les bienvenus
 - Les retours sur mon code sont les bienvenus
-- Les retours sur le design ne sont pas les bienvenus 😂
 
 ## Auteur(s)
 <ul>
