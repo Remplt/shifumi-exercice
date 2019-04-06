@@ -109,6 +109,9 @@ On va créer le jeu du shifumi ou "Pierre - feuille - ciseau"
 3. Il faudra rendre vide les strings qui contiennent quelque chose ou pas.
 </details>
 
+### Etape ultra Bonus : Et si on recommençait ?
+- Maintenant que tu as réussi à développer ce shifumi en JavaScript Vanilla, tu dois maintenant le recréer en utilisant seulement jQuery. 😈
+- Pour cette partie, il n'y aura pas de correction, mais si tu souhaites partager ta solution en jQuery n'hésites pas.
 
 ## Correction
 - Le code de correction n'est pas forcément le plus optimisé mais il peut vous permettre de vous aiguiller ou de voir une autre manière de faire.
